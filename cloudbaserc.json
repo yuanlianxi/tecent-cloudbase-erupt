@@ -2,19 +2,19 @@
   "version": "2.0",
   "envId": "{{env.ENV_ID}}",
   "framework": {
-    "name": "halo",
+    "name": "erupt-myzx",
     "plugins": {
       "client": {
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "cpu": 1,
           "mem": 1,
-          "serviceName": "halo",
+          "serviceName": "erupt-myzx",
           "servicePath": "/",
           "uploadType": "package",
-          "containerPort": 8090,
+          "containerPort": 8080,
           "volumeMounts": {
-            "/opt/.halo": "halo-cfs"
+            "/opt/.erupt": "erupt-cfs"
           }
         }
       }
@@ -23,7 +23,7 @@
       "addons": [
         {
           "type": "CFS",
-          "name": "halo-cfs"
+          "name": "erupt-cfs"
         }
       ]
     }
